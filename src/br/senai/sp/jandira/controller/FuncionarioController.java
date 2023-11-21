@@ -95,6 +95,17 @@ public class FuncionarioController {
         }
 
     }
+
+
+    public void editarFuncionario(String nome, String newSobrenome) throws SQLException {
+        Statement statement = objConnection.createStatement();
+        String queryEdicao = "UPDATE funcionario set sobrenome = '" + newSobrenome + "' WHERE nome = '" + nome + "'";
+        statement.executeUpdate(queryEdicao);
+        System.out.println("Dados atualizados com sucesso");
+    }
+
+
+
 }
 
 

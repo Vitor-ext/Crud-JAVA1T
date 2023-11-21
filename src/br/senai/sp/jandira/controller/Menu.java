@@ -19,6 +19,7 @@ public class Menu {
             System.out.println("------------------------------");
             System.out.println("-            Menu            -");
             System.out.println("------------------------------");
+            System.out.println("0 - Editar Funcionario        ");
             System.out.println("1 - Cadastrar Funcionario     ");
             System.out.println("2 - Listar Funcionario        ");
             System.out.println("3 - Deletar Funcionario       ");
@@ -31,6 +32,16 @@ public class Menu {
             scanner.nextLine();
 
             switch (opcao) {
+
+                case 0:
+                    System.out.println("Qual o nome que deseja alterar: ");
+                    String nome = scanner.nextLine();
+                    System.out.println("Informe o valor do novo sobrenome: ");
+                    String newSobrenome = scanner.nextLine();
+
+                    funcionario.editarFuncionario(nome, newSobrenome);
+
+                    break;
                 case 1:
                     Funcionario newFuncionario = new Funcionario();
                     newFuncionario.cadastrarFuncionario();
